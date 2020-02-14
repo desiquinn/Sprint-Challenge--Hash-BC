@@ -23,12 +23,26 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 ## Interview Questions
 
 Explain in detail the workings of a dynamic array:
+- An array that resizes automatically
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+- access at a given index - O(1) : constant
+- adding a new element at end - O(1) : constant
+- if it needs to be resize because of no room the worse case  - O(n) - linear
+- adding to the front means you have to shift each element - O(n) - linear
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
+ - The worse case is O(n) because it has to copy each item into the next memory allocation
 
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
- 
+ A block is like a link in the chain, it contains:
+- Index, timestamp, transaction list, proof, hash of the previous block.
+The chain is the collection of each of these blocks which are linked sigularly by reference to the previous hash
+- Starts with the genisus block that's manually created.
+
+
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+
+- In block chains specifically it's easy to modify the previous hash if your change the content of the previous block chain, but it may take a long time to do it, and it wont be accepted by others unless your chain is the longest.  So 
+there is another security measure called proof of work... this proof is added to the block and hashed together to make this more difficult (time and expense) to reproduce but makes it easy to verify. The proof basically guesses random numbers to find the right value that matches a pre-defined algorithm.
 
 ## Project Set Up
 
