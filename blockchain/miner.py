@@ -23,13 +23,13 @@ def proof_of_work(last_proof):
     start = timer()
 
     print("Searching for next proof")
-    proof = random.randint(0,1000000)
+    proof = random.randint(10000,1000000)
     #  TODO: Your code here
     block = f"{last_proof}".encode()
     block_string = hashlib.sha256(block).hexdigest()
 
     while valid_proof(block_string, proof) is False:
-        proof += random.randint(1,1000000)
+        proof += 1
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof

@@ -15,7 +15,7 @@ def get_indices_of_item_weights(weights, length, limit):
         # the first number exsists
             # 
     for i,w in enumerate(weights):
-        first = hash_table_retrieve(ht, i)
+        first = hash_table_retrieve(ht, limit-w)
         print(f"first{first}")
         if first is not None:
             second = i
@@ -24,7 +24,7 @@ def get_indices_of_item_weights(weights, length, limit):
                 return (first, second)
             else:
                 return (second, first)       
-
+        hash_table_insert(ht,w,i)
     # hash_table_retrieve(ht,)
     #item1 + item2 == limit
     return None
