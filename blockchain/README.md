@@ -17,13 +17,13 @@ Some things to keep in mind:
 * There is a test server that you can test your code on:  lambda-coin-test-1.   As before, you can change the server that the miner uses by including it in the command to run the miner:  `python3 miner.py https://lambda-coin-test-1.herokuapp.com/api`
 ** Please only mine against the test server to test your code - stop mining when the test is over
 * The main server, and the competition, is the default and will run with `python3 miner.py`
-* Please change your name in `my_id.txt` to something recognizable
+* - Please change your name in `my_id.txt` to something recognizable
 
 
 Some Strategy Suggestions:
-* Don't forget to install dependencies with `pipenv install` and run them inside `pipenv shell`
-* _Think about what will happen if your strategy is the same as the example from class.  If you start at 0 and count upward, and someone else does the same thing, but they start earlier or have a faster computer, what will happen?_
-
+* - Don't forget to install dependencies with `pipenv install` and run them inside `pipenv shell`
+* - _Think about what will happen if your strategy is the same as the example from class.  If you start at 0 and count upward, and someone else does the same thing, but they start earlier or have a faster computer, what will happen?_
+ - use randint() for the proof
 
 API Endpoints:
 
